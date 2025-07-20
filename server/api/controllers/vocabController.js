@@ -22,13 +22,31 @@ exports.create_a_word = (req, res) => {
 };
 
 exports.read_a_word = (req , res) =>{
-    vocab.findById(req.params.wordId, (err, word) => {
-    req.body,
-    {new : true},
-    (err, word) => {
+    Vocab.findById(req.params.wordId, (err, word) => {
+        if( err) res.send(err);
+        res.json(word);
+    });
+};
+
+exports.update_a_word = (req, res) => {
+    Vocab.findOneAndUpdate(
+        { _id: req.params.wordId },
+        req.body,
+        { new: true },
+        (err, word) => {
+            if (err) {
+                return res.status(500).send(err);
+            }
+            res.json(word);
+        }
+    );
+};
+
+exports.delete_a_word = (req, res) => {
+    Vocab.deleteOne({ _id: req.params.wordId }, (err) => {
         if (err) {
             return res.status(500).send(err);
-        res.json
         }
-        
-}
+        res.status(204).send();
+    });
+};
