@@ -29,5 +29,6 @@ exports.read_a_word = (req , res) =>{
         if (err) {
             return res.status(500).send(err);
         res.json
-
+        }
+        
 }
