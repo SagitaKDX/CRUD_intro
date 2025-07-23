@@ -6,7 +6,7 @@ exports.list_all_words = (req , res) => {
         if (err) {
             return res.status(500).send(err);
         }
-        res.json(words);
+        res.json(vocab);
     });
 };
 

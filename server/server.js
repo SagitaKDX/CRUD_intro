@@ -7,9 +7,8 @@ const routes = require('./api/routes/vocabRoutes'); // Assuming vocabRoutes.js i
 
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/VocabDB', 
-    { useNewUrlParser: true}
-);
+mongoose.connect('mongodb+srv://minhltgcs230050:14122005anhchiemminhle12@fgwweb2cluster.jsksk65.mongodb.net/?retryWrites=true&w=majority&appName=FGWWeb2Cluster');
+
 
 const port = process.env.PORT || 3000;
 const app = express();
