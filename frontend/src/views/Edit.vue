@@ -23,7 +23,8 @@
         methods:{
             createOrUpdate: async function(word){
                 await api.updateWord(word);
-                alert('Word updated sucessfully!');
+                this.flash(`Word updated sucessfully!` , 'success');
+                // alert('Word updated sucessfully!');
                 this.$route.push(`/words/${word._id}`);
             }
         }
