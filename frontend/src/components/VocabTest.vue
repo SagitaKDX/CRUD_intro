@@ -1,7 +1,7 @@
 <template>
     <div class="vocab-test-container">
       <div class="score-display">
-        <h2>Score: {{ score }} out of {{ this.words.length }}</h2>
+      <h2>Score: {{ score }} out of {{ this.words.length }}</h2>
       </div>
       
       <!-- Language Selection -->
@@ -37,7 +37,7 @@
       <div class="test-interface" v-if="testStarted">
         <form action="#" @submit.prevent="onSubmit">
           <div class="input-group">
-            <div class="ui labeled input fluid">
+        <div class="ui labeled input fluid">
               <div class="input-label">
                 <i :class="getFlagClass(fromLanguage) + ' flag-icon'"></i> {{ getLanguageName(fromLanguage) }}
               </div>
@@ -51,14 +51,14 @@
               </div>
               <input type="text" class="input-field" placeholder="Enter word..." v-model="userAnswer" :disabled="testOver" autocomplete="off" />
             </div>
-          </div>
-    
+        </div>
+  
           <button class="submit-button positive ui button" :disabled="testOver">Submit</button>
-        </form>
-    
-        <p :class="['results', resultClass]">
-          <span v-html="result"></span>
-        </p>
+      </form>
+  
+      <p :class="['results', resultClass]">
+        <span v-html="result"></span>
+      </p>
       </div>
     </div>
   </template>
@@ -174,7 +174,7 @@
 
 /* Score display styling */
 .score-display {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #2185d0 0%, #1678c2 100%);
   color: white;
   padding: 20px;
   border-radius: 15px;
@@ -339,8 +339,8 @@
 }
 
 /* Results styling */
-.results {
-  margin: 25px auto;
+  .results {
+    margin: 25px auto;
   padding: 20px;
   border-radius: 15px;
   font-size: 1.1em;
@@ -351,16 +351,16 @@
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
-}
-
-.error {
+  }
+  
+  .error {
   border: 2px solid #e74c3c;
   color: #c0392b;
   background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
   box-shadow: 0 4px 15px rgba(231, 76, 60, 0.1);
-}
-
-.success {
+  }
+  
+  .success {
   border: 2px solid #27ae60;
   color: #1e8449;
   background: linear-gradient(135deg, #e8f5e8 0%, #d4edda 100%);
@@ -416,5 +416,5 @@ select:focus,
 input:focus {
   outline: 2px solid #667eea;
   outline-offset: 2px;
-}
-</style>
+  }
+  </style>
