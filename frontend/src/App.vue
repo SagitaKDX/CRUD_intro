@@ -12,6 +12,9 @@
           <router-link to="/test" class="item">
             <i class="graduation cap icon"></i> Test
           </router-link>
+          <router-link to="/about" class="item">
+            <i class="info circle icon"></i> About
+          </router-link>
         </div>
       </div>
     </div>
