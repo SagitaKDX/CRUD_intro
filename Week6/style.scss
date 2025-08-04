@@ -1,0 +1,7 @@
+$myColor: #d7835f;
+.a{
+    .nested {
+        color: $myColor;
+        font-size: 16px;
+    }
+}
